@@ -71,7 +71,7 @@
     NSMutableString *line = [[NSMutableString alloc] initWithString:@""];
     while (true) {
         uint8_t byte;
-        int len = [_inputStream read:&byte maxLength:1];
+        long len = [_inputStream read:&byte maxLength:1];
         
         if (len > 0) {
             if (byte == '\n') {
@@ -90,9 +90,9 @@
 
 - (NSData *) readBlock:(int)length {
     NSMutableData *block = [[NSMutableData alloc] init];
-    int bytesRead = 0;
+    long bytesRead = 0;
     uint8_t buf[length];
-    int len = 0;
+    long len = 0;
     do {
         len = [_inputStream read:buf maxLength:length - bytesRead];
         if (len > 0) {
@@ -109,13 +109,13 @@
 }
 
 - (void) write:(NSData *)data {
-    int dataLength = [data length];
+    long dataLength = [data length];
     int dataWritten = 0;
     uint8_t buf[dataLength];
     do {
         NSRange range = NSMakeRange(dataWritten, dataLength - dataWritten);
         [data getBytes:buf range:range];
-        int len = [_outputStream write:buf maxLength:dataLength - dataWritten];
+        long len = [_outputStream write:buf maxLength:dataLength - dataWritten];
         if (len > 0) {
             dataWritten += len;
         }
