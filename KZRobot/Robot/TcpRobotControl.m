@@ -133,7 +133,6 @@
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
 	switch (streamEvent) {
 		case NSStreamEventOpenCompleted:
-			NSLog(@"***************Stream opened*************************");
             if ([theStream isKindOfClass:[NSInputStream class]]) {
                 dispatch_semaphore_signal(_inputStreamOpened);
             }
@@ -145,7 +144,6 @@
 		case NSStreamEventHasBytesAvailable:
 			break;
 		case NSStreamEventErrorOccurred:
-			NSLog(@"********Can not connect to the host!***********");
             if ([theStream isKindOfClass:[NSInputStream class]]) {
                 dispatch_semaphore_signal(_inputStreamOpened);
             }
@@ -155,10 +153,9 @@
             _connected = NO;
 			break;
 		case NSStreamEventEndEncountered:
-            NSLog(@"***************End of Stream*******************");
 			break;
-		default:
-			NSLog(@"**************Unknown event********************");
+		default:;
+        
 	}
 }
 
