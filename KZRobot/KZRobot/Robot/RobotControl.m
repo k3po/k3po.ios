@@ -87,7 +87,7 @@ static NSRegularExpression* regex;
 - (void) writePrepareCommand:(PrepareCommand *)prepareCommand {
     NSMutableString *commandString = [[NSMutableString alloc] initWithString:@"PREPARE\n"];
     [commandString appendFormat:@"name:%@\n", [prepareCommand name]];
-    [commandString appendFormat:@"content-length:%d\n", [[prepareCommand script] length]];
+    [commandString appendFormat:@"content-length:%lu\n", (unsigned long)[[prepareCommand script] length]];
     [commandString appendString:@"\n"];
     [commandString appendString:[prepareCommand script]];
     [self write:[commandString dataUsingEncoding:NSUTF8StringEncoding]];
