@@ -48,6 +48,7 @@
     [_outputStream setDelegate:self];
     [self performSelector:@selector(scheduleInCurrentThread) onThread:[[self class] networkThread] withObject:nil waitUntilDone:YES];
     
+    // wait until either both input and out stream opens or fails to open
     dispatch_semaphore_wait(_inputStreamOpened, DISPATCH_TIME_FOREVER);
     dispatch_semaphore_wait(_outputStreamOpened, DISPATCH_TIME_FOREVER);
     
