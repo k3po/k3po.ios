@@ -23,6 +23,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		407355911998407C009B48B4 /* XCRoboticTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4073558F1998407C009B48B4 /* XCRoboticTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		407355921998407C009B48B4 /* XCRoboticTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 407355901998407C009B48B4 /* XCRoboticTestCase.m */; };
+		40735594199840D5009B48B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40735593199840D5009B48B4 /* XCTest.framework */; };
 		4083B56419949C9F00223239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4083B56319949C9F00223239 /* Foundation.framework */; };
 		4083B58A19949EC600223239 /* KZRobot.h in Headers */ = {isa = PBXBuildFile; fileRef = 4083B56819949C9F00223239 /* KZRobot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4083B5981994A3B900223239 /* CommandEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4083B58E1994A3B900223239 /* CommandEvent.h */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4073558F1998407C009B48B4 /* XCRoboticTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCRoboticTestCase.h; path = Robot/XCRoboticTestCase.h; sourceTree = "<group>"; };
+		407355901998407C009B48B4 /* XCRoboticTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCRoboticTestCase.m; path = Robot/XCRoboticTestCase.m; sourceTree = "<group>"; };
+		40735593199840D5009B48B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4083B56019949C9F00223239 /* libKZRobot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKZRobot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4083B56319949C9F00223239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4083B56719949C9F00223239 /* KZRobot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KZRobot-Prefix.pch"; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40735594199840D5009B48B4 /* XCTest.framework in Frameworks */,
 				4083B5C71994A5D800223239 /* CFNetwork.framework in Frameworks */,
 				4083B56419949C9F00223239 /* Foundation.framework in Frameworks */,
 			);
@@ -135,6 +142,7 @@
 		4083B56219949C9F00223239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40735593199840D5009B48B4 /* XCTest.framework */,
 				4083B5C61994A5D800223239 /* CFNetwork.framework */,
 				4083B56319949C9F00223239 /* Foundation.framework */,
 			);
@@ -162,6 +170,8 @@
 		4083B58B1994A33200223239 /* Robot */ = {
 			isa = PBXGroup;
 			children = (
+				4073558F1998407C009B48B4 /* XCRoboticTestCase.h */,
+				407355901998407C009B48B4 /* XCRoboticTestCase.m */,
 				4083B5B21994A3ED00223239 /* RobotControl.h */,
 				4083B5B31994A3ED00223239 /* RobotControl.m */,
 				4083B5B41994A3ED00223239 /* RobotControlFactory.h */,
@@ -219,6 +229,7 @@
 			files = (
 				4083B5BC1994A3ED00223239 /* RobotControl.h in Headers */,
 				4083B5C21994A3ED00223239 /* ScriptRunner.h in Headers */,
+				407355911998407C009B48B4 /* XCRoboticTestCase.h in Headers */,
 				4083B5C01994A3ED00223239 /* RoboticLatch.h in Headers */,
 				4083B59A1994A3B900223239 /* ErrorEvent.h in Headers */,
 				4083B59C1994A3B900223239 /* FinishedEvent.h in Headers */,
@@ -337,6 +348,7 @@
 				4083B5AF1994A3D700223239 /* PrepareCommand.m in Sources */,
 				4083B5B11994A3D700223239 /* StartCommand.m in Sources */,
 				4083B59B1994A3B900223239 /* ErrorEvent.m in Sources */,
+				407355921998407C009B48B4 /* XCRoboticTestCase.m in Sources */,
 				4083B5AB1994A3D700223239 /* AbortCommand.m in Sources */,
 				4083B5AD1994A3D700223239 /* Command.m in Sources */,
 				4083B59D1994A3B900223239 /* FinishedEvent.m in Sources */,
@@ -434,6 +446,10 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/KZRobot.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KZRobot/KZRobot-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -450,6 +466,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/KZRobot.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KZRobot/KZRobot-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -493,6 +513,7 @@
 				4083B58519949C9F00223239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4083B5D61994AA7F00223239 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +522,7 @@
 				4083B5D81994AA7F00223239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
