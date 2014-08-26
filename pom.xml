@@ -15,7 +15,7 @@
 
     <groupId>com.kaazing.robot.ios</groupId>
     <artifactId>KZRobot</artifactId>
-    <version>1.0.0.2</version>
+    <version>1.0.0.3-SNAPSHOT</version>
     <name>iOS Robot Control</name>
     <packaging>pom</packaging>
     
