@@ -18,6 +18,11 @@
     <version>1.0.0.1-SNAPSHOT</version>
     <name>iOS Robot Control</name>
     <packaging>pom</packaging>
+    
+    <scm>
+		<url>https://github.com/kaazing/robot.ios.git</url>
+		<connection>scm:git:https://github.com/kaazing/robot.ios.git</connection>
+	</scm>
 
     
     <build>
