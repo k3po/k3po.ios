@@ -3,5 +3,7 @@ robot.ios
 
 Robot iOS Test Framework
 
-- [X] Implement new robot control protocol
+TODO
+==========
+- Implement new robot control protocol
 
