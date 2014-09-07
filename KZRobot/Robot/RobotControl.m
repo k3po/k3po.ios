@@ -209,6 +209,7 @@ static NSRegularExpression* regex;
                     NSString *script = [[NSString alloc] initWithData:content encoding:NSUTF8StringEncoding];
                     if (!expectedScriptRead) {
                         [event setExpectedScript:script];
+                        expectedScriptRead = YES;
                     }
                     else {
                         [event setObservedScript:script];
