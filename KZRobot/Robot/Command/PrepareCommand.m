@@ -16,12 +16,4 @@
     return PREPARE;
 }
 
-- (NSString *) script {
-    return _script;
-}
-
-- (void) setScript:(NSString *)script {
-    _script = script;
-}
-
 @end

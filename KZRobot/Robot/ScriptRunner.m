@@ -46,7 +46,6 @@
             // send PREPARE command
             PrepareCommand *prepareCommand = [[PrepareCommand alloc] init];
             [prepareCommand setName:_name];
-            [prepareCommand setScript:_expectedScript];
             [_control writeCommand:prepareCommand];
             
             while (true) {

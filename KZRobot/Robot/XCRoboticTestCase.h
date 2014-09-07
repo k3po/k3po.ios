@@ -14,4 +14,6 @@
 
 - (void) join;
 
+- (void) initializeScriptRoot;
+
 @end

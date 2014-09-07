@@ -9,12 +9,42 @@
 #import "XCRoboticTestCase.h"
 #import "ScriptRunner.h"
 
+
+NSString *const SCRIPT_EXTENSION = @".rpt";
+
 @implementation XCRoboticTestCase {
     ScriptRunner *_scriptRunner;
+    NSString *_scriptRoot;
+}
+
+- (void) initializeScriptRoot {
+    _scriptRoot = nil;
+}
+
+- (id) init {
+    self = [super init];
+    if (self) {
+        [self initializeScriptRoot];
+    }
+    return self;
 }
 
 - (void) prepare:(NSString *)script {
-    _scriptRunner = [[ScriptRunner alloc] initWithName:script];
+    
+    if ([script hasSuffix:SCRIPT_EXTENSION]) {
+        script = [script stringByDeletingPathExtension];
+    }
+    
+    NSString *scriptName = @"";
+    if (_scriptRoot == nil) {
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        scriptName = [bundle pathForResource:script ofType:@"rpt"];
+    }
+    else {
+        scriptName = [NSString stringWithFormat:@"%@/%@", _scriptRoot, script];
+    }
+    
+    _scriptRunner = [[ScriptRunner alloc] initWithName:scriptName];
     [_scriptRunner start];
 }
 

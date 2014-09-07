@@ -10,8 +10,4 @@
 
 @interface PrepareCommand : Command
 
-- (NSString *) script;
-
-- (void) setScript:(NSString *)script;
-
 @end
