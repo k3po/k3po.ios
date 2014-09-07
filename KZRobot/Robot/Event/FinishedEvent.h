@@ -10,8 +10,12 @@
 
 @interface FinishedEvent : CommandEvent
 
-- (void) setScript:(NSString *)script;
+- (void) setObservedScript:(NSString *)script;
 
-- (NSString *) script;
+- (NSString *) observedScript;
+
+- (NSString *) expectedScript;
+
+- (void) setExpectedScript:(NSString *)script;
 
 @end

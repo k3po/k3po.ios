@@ -12,6 +12,8 @@
 #import "StartCommand.h"
 #import "CommandEvent.h"
 #import "FinishedEvent.h"
+#import "AbortCommand.h"
+#import "ErrorEvent.h"
 
 @implementation ScriptRunner {
     NSString *_name;
@@ -23,12 +25,11 @@
     NSString *_observedScript;
 }
 
-- (id) initWithName:(NSString *)name expectedScript:(NSString *)script latch:(RoboticLatch *)latch {
+- (id) initWithName:(NSString *)name {
     self = [super init];
     if (self) {
         _name = name;
-        _expectedScript = script;
-        _latch = latch;
+        _latch = [[RoboticLatch alloc] init];
         
         _controlFactory = [[RobotControlFactory alloc] init];
         NSURL *controlUrl = [[NSURL alloc] initWithString:@"tcp://localhost:11642"];
@@ -65,18 +66,28 @@
                         break;
                     }
                     case ERROR:
-                        // TODO: [_latch notifyException];
+                    {
+                        ErrorEvent *errorEvent = (ErrorEvent *)event;
+                        NSString *errorMessage = [NSString stringWithFormat:@"%@:%@", [errorEvent summary], [errorEvent description]];
+                        NSException *exception = [[NSException alloc] initWithName:@"RoboticException" reason:errorMessage userInfo:nil];
+                        [_latch notifyException:exception];
                         break;
+                    }
                     case FINISHED:
                     {
                         FinishedEvent *finishedEvent = (FinishedEvent *)event;
-                        _observedScript = [finishedEvent script];
+                        _observedScript = [finishedEvent observedScript];
+                        _expectedScript = [finishedEvent expectedScript];
                         [_latch notifyFinished];
                         break;
                     }
                     default:
-                        // TODO: throw exception
+                    {
+                        NSString *errorMessage = [NSString stringWithFormat:@"Invalid event: %u", [event kind]];
+                        NSException *exception = [[NSException alloc] initWithName:NSInvalidArgumentException reason:errorMessage userInfo:nil];
+                        [_latch notifyException:exception];
                         break;
+                    }
                 }
             }
         }
@@ -88,13 +99,19 @@
         }
         
     });
+    
+    [_latch awaitStartable];
 }
 
 - (void) join {
-    [_latch awaitFinished];
-}
-
-- (void) abort {
+    @try {
+        [_latch awaitFinishedWithTimeout:5];
+    }
+    @catch(NSException *ex) {
+        if ([ex.name isEqualToString:@"Timeout"]) {
+            [self sendAbortCommand];
+        }
+    }
     
 }
 
@@ -104,6 +121,12 @@
 
 - (NSString *) expectedScript {
     return _expectedScript;
+}
+
+- (void) sendAbortCommand {
+    AbortCommand *abortCommand = [[AbortCommand alloc] init];
+    [abortCommand setName:_name];
+    [_control writeCommand:abortCommand];
 }
 
 

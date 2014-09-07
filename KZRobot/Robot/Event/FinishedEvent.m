@@ -9,19 +9,28 @@
 #import "FinishedEvent.h"
 
 @implementation FinishedEvent {
-    NSString *_script;
+    NSString *_observedScript;
+    NSString *_expectedScript;
 }
 
 - (EventKind) kind {
     return FINISHED;
 }
 
-- (void) setScript:(NSString *)script {
-    _script = script;
+- (void) setObservedScript:(NSString *)script {
+    _observedScript = script;
 }
 
-- (NSString *) script {
-    return _script;
+- (NSString *) observedScript {
+    return _observedScript;
+}
+
+- (void) setExpectedScript:(NSString *)script {
+    _expectedScript = script;
+}
+
+- (NSString *) expectedScript {
+    return _expectedScript;
 }
 
 @end

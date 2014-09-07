@@ -22,6 +22,9 @@
 
 - (void) awaitFinished;
 
+// timeoout in seconds
+- (void) awaitFinishedWithTimeout:(int)timeout;
+
 - (void) notifyException:(NSException *)exception;
 
 @end

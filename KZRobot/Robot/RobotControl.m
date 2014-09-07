@@ -121,7 +121,7 @@ static NSRegularExpression* regex;
                 [event setName:value];
             }
             else {
-                // TODO: throw exception
+                [NSException raise:NSInvalidArgumentException format:@"Unrecognized event header:%@", headerName];
             }
         }
         
@@ -173,7 +173,7 @@ static NSRegularExpression* regex;
                 [event setSummary:value];
             }
             else {
-                // TODO: throw exception
+                [NSException raise:NSInvalidArgumentException format:@"Unrecognized event header:%@", headerName];
             }
         }
         
@@ -191,7 +191,7 @@ static NSRegularExpression* regex;
 - (FinishedEvent *) readFinishedEvent {
     FinishedEvent *event = [[FinishedEvent alloc] init];
     NSString *header;
-    int length = 0;
+    BOOL expectedScriptRead = NO;
     do {
         header = [self readLine];
         NSRange   range = NSMakeRange(0, [header length]);
@@ -203,19 +203,27 @@ static NSRegularExpression* regex;
                 [event setName:value];
             }
             else if ([headerName isEqualToString:@"content-length"]) {
-                length = [value intValue];
+                int length = [value intValue];
+                if (length > 0) {
+                    NSData *content = [self readBlock:length];
+                    NSString *script = [[NSString alloc] initWithData:content encoding:NSUTF8StringEncoding];
+                    if (!expectedScriptRead) {
+                        [event setExpectedScript:script];
+                    }
+                    else {
+                        [event setObservedScript:script];
+                    }
+                    
+                }
+
             }
             else {
-                // TODO: throw exception
+                [NSException raise:NSInvalidArgumentException format:@"Unrecognized event header:%@", headerName];
             }
         }
         
     }while (![header isEqualToString:@""]);
     
-    if (length > 0) {
-        NSData *content = [self readBlock:length];
-        [event setScript:[[NSString alloc] initWithData:content encoding:NSUTF8StringEncoding]];
-    }
     
     return event;
 
