@@ -1,10 +1,9 @@
-robot.ios
-=========
+# KZRobot
 
-Robot iOS Test Framework
+Objective-C based Network Protocol Testing Framework
 
-TODO
-==========
-- Add description in README
-- Add Samples
+## Authors
+
+* [Prashant Khanal](mailto:prashantkhanal@gmail.com)
+
 
