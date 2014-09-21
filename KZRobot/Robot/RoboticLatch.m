@@ -97,7 +97,7 @@ typedef enum {
 }
 
 - (void) awaitFinishedWithTimeout:(int)timeout {
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 5 * 1000000000);
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, timeout * 1000000000);
     long timedOut = dispatch_semaphore_wait(_finished, time);
     if (timedOut != 0) {
         [NSException raise:@"Timeout" format:@"Could not receive FINISH event in %d seconds", timeout];

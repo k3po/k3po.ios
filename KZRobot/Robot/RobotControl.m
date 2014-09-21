@@ -208,6 +208,9 @@ static NSRegularExpression* regex;
                     if (!expectedScriptRead) {
                         [event setExpectedScript:script];
                         expectedScriptRead = YES;
+                        
+                        // end of expected script
+                        [self readLine];
                     }
                     else {
                         [event setObservedScript:script];
