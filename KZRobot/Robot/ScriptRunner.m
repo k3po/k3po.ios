@@ -53,7 +53,11 @@
                 switch ([event kind]) {
                     case PREPARED:
                     {
+                        // notify script is prepared
                         [_latch notifyPrepared];
+                        
+                        [_latch awaitStartable];
+                        
                         StartCommand *startCommand = [[StartCommand alloc] init];
                         [startCommand setName:_name];
                         [_control writeCommand:startCommand];
@@ -104,6 +108,9 @@
 
 - (void) join {
     @try {
+        
+        [_latch notifyStartable];
+        
         [_latch awaitFinishedWithTimeout:5];
     }
     @catch(NSException *ex) {
