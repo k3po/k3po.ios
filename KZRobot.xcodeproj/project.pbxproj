@@ -65,6 +65,13 @@
 			remoteGlobalIDString = 4083B55F19949C9F00223239;
 			remoteInfo = KZRobot;
 		};
+		40E106DE1A62241C00C29E8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4083B55819949C9F00223239 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4083B55F19949C9F00223239;
+			remoteInfo = KZRobot;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -297,6 +304,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				40E106DF1A62241C00C29E8A /* PBXTargetDependency */,
 			);
 			name = KZRobotTests;
 			productName = KZRobotTests;
@@ -428,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = 4083B55F19949C9F00223239 /* KZRobot */;
 			targetProxy = 4083B5D91994AAA000223239 /* PBXContainerItemProxy */;
+		};
+		40E106DF1A62241C00C29E8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4083B55F19949C9F00223239 /* KZRobot */;
+			targetProxy = 40E106DE1A62241C00C29E8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -570,7 +583,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = KZRobotTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,7 +601,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = KZRobotTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,6 +645,7 @@
 				40E106DD1A62167A00C29E8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
