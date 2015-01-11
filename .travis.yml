@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: KZRobot.xcodeproj
 xcode_scheme: KZRobot
+xcode_sdk: iphonesimulator8.1
