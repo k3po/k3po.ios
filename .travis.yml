@@ -2,7 +2,6 @@ language: objective-c
 before_install:
     - brew update
     - brew upgrade xctool
-#xcode_project: KZRobot.xcodeproj
-#xcode_scheme: KZRobot
-#xcode_sdk: iphonesimulator
-script: xctool -project KZRobot.xcodeproj -scheme KZRobot build test -sdk iphonesimulator
+xcode_project: KZRobot.xcodeproj
+xcode_scheme: KZRobotTests
+xcode_sdk: iphonesimulator
