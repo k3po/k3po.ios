@@ -54,6 +54,7 @@
 		4083B5C41994A3ED00223239 /* TcpRobotControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4083B5BA1994A3ED00223239 /* TcpRobotControl.h */; };
 		4083B5C51994A3ED00223239 /* TcpRobotControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4083B5BB1994A3ED00223239 /* TcpRobotControl.m */; };
 		4083B5C71994A5D800223239 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4083B5C61994A5D800223239 /* CFNetwork.framework */; };
+		40E106DA1A62167A00C29E8A /* KZRobotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E106D91A62167A00C29E8A /* KZRobotTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,9 @@
 		4083B5BA1994A3ED00223239 /* TcpRobotControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TcpRobotControl.h; path = Robot/TcpRobotControl.h; sourceTree = "<group>"; };
 		4083B5BB1994A3ED00223239 /* TcpRobotControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TcpRobotControl.m; path = Robot/TcpRobotControl.m; sourceTree = "<group>"; };
 		4083B5C61994A5D800223239 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		40E106D51A62167A00C29E8A /* KZRobotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KZRobotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E106D81A62167A00C29E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E106D91A62167A00C29E8A /* KZRobotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZRobotTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40E106D21A62167A00C29E8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4083B56519949C9F00223239 /* KZRobot */,
+				40E106D61A62167A00C29E8A /* KZRobotTests */,
 				4083B56219949C9F00223239 /* Frameworks */,
 				4083B56119949C9F00223239 /* Products */,
 			);
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				4083B56019949C9F00223239 /* libKZRobot.a */,
+				40E106D51A62167A00C29E8A /* KZRobotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +223,23 @@
 			name = Event;
 			sourceTree = "<group>";
 		};
+		40E106D61A62167A00C29E8A /* KZRobotTests */ = {
+			isa = PBXGroup;
+			children = (
+				40E106D91A62167A00C29E8A /* KZRobotTests.m */,
+				40E106D71A62167A00C29E8A /* Supporting Files */,
+			);
+			path = KZRobotTests;
+			sourceTree = "<group>";
+		};
+		40E106D71A62167A00C29E8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40E106D81A62167A00C29E8A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -256,6 +286,23 @@
 			productReference = 4083B56019949C9F00223239 /* libKZRobot.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		40E106D41A62167A00C29E8A /* KZRobotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E106DB1A62167A00C29E8A /* Build configuration list for PBXNativeTarget "KZRobotTests" */;
+			buildPhases = (
+				40E106D11A62167A00C29E8A /* Sources */,
+				40E106D21A62167A00C29E8A /* Frameworks */,
+				40E106D31A62167A00C29E8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KZRobotTests;
+			productName = KZRobotTests;
+			productReference = 40E106D51A62167A00C29E8A /* KZRobotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,6 +311,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Kaazing;
+				TargetAttributes = {
+					40E106D41A62167A00C29E8A = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
 			};
 			buildConfigurationList = 4083B55B19949C9F00223239 /* Build configuration list for PBXProject "KZRobot" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -279,9 +331,20 @@
 			targets = (
 				4083B55F19949C9F00223239 /* KZRobot */,
 				4083B5D51994AA7F00223239 /* Framework */,
+				40E106D41A62167A00C29E8A /* KZRobotTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40E106D31A62167A00C29E8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		4083B5C81994A7C300223239 /* Run Script */ = {
@@ -347,6 +410,14 @@
 				4083B59F1994A3B900223239 /* PreparedEvent.m in Sources */,
 				4083B5C51994A3ED00223239 /* TcpRobotControl.m in Sources */,
 				4083B5BF1994A3ED00223239 /* RobotControlFactory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E106D11A62167A00C29E8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E106DA1A62167A00C29E8A /* KZRobotTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +555,46 @@
 			};
 			name = Release;
 		};
+		40E106DC1A62167A00C29E8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KZRobotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		40E106DD1A62167A00C29E8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KZRobotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -513,6 +624,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		40E106DB1A62167A00C29E8A /* Build configuration list for PBXNativeTarget "KZRobotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E106DC1A62167A00C29E8A /* Debug */,
+				40E106DD1A62167A00C29E8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
