@@ -51,29 +51,29 @@
     }];
 }
 
- - (void) testConnectDisconnect {
-    K3poController *controller = [[K3poController alloc] initWithURL:[NSURL URLWithString:@"tcp://localhost:11642"]];
+// - (void) testConnectDisconnect {
+//    K3poController *controller = [[K3poController alloc] initWithURL:[NSURL URLWithString:@"tcp://localhost:11642"]];
+//
+//    [controller connect];
+//    XCTAssertTrue([controller isConnected], @"Failed to connect");
+//
+//    [controller disconnect];
+// }
 
-    [controller connect];
-    XCTAssertTrue([controller isConnected], @"Failed to connect");
-
-    [controller disconnect];
- }
-
- - (void) testPrepareCommandAndPreparedEvent {
-    K3poController *controller = [[K3poController alloc] initWithURL:[NSURL URLWithString:@"tcp://localhost:11642"]];
-    [controller connect];
-    XCTAssertTrue([controller isConnected], @"Failed to connect");
-
-    NSArray *scripts = [NSArray arrayWithObjects:@"org/kaazing/specification/ws/framing/echo.binary.payload.length.0/handshake.response.and.frame", nil];
-    K3poPrepareCommand *prepareCommand = [[K3poPrepareCommand alloc] initWithScripts:scripts];
-    [[controller commandDispatcher] writeCommand:prepareCommand];
-
-    K3poEvent *event = [[controller eventManager] readEvent];
-    XCTAssertEqual(PREPARED, [event kind], @"Incorrect event type");
-
-    [controller disconnect];
-}
+// - (void) testPrepareCommandAndPreparedEvent {
+//    K3poController *controller = [[K3poController alloc] initWithURL:[NSURL URLWithString:@"tcp://localhost:11642"]];
+//    [controller connect];
+//    XCTAssertTrue([controller isConnected], @"Failed to connect");
+//
+//    NSArray *scripts = [NSArray arrayWithObjects:@"org/kaazing/specification/ws/framing/echo.binary.payload.length.0/handshake.response.and.frame", nil];
+//    K3poPrepareCommand *prepareCommand = [[K3poPrepareCommand alloc] initWithScripts:scripts];
+//    [[controller commandDispatcher] writeCommand:prepareCommand];
+//
+//    K3poEvent *event = [[controller eventManager] readEvent];
+//    XCTAssertEqual(PREPARED, [event kind], @"Incorrect event type");
+//
+//    [controller disconnect];
+//}
 
 //- (void) testK3poClient {
 //    BOOL success = YES;
