@@ -20,23 +20,13 @@
  */
 #import "K3poCommand.h"
 
-@implementation K3poCommand {
-    NSString *_name;
-}
+@implementation K3poCommand
 
 - (K3poCommandKind) kind {
     NSException *exception = [NSException exceptionWithName:@"InvalidOperationException"
                                                      reason:@"Abstract method"
                                                    userInfo:nil];
     @throw exception;
-}
-
-- (void) setName:(NSString *)name {
-    _name = name;
-}
-
-- (NSString *) name {
-    return _name;
 }
 
 @end

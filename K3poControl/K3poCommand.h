@@ -30,8 +30,4 @@ typedef enum {
 
 - (K3poCommandKind) kind;
 
-- (void) setName:(NSString *)name;
-
-- (NSString *) name;
-
 @end
