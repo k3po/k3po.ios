@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B52944D31B20177800D86F91 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B52944D41B20177800D86F91 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				B52944D91B20181D00D86F91 /* Multiplatform Build */,
+			);
+			dependencies = (
+				B52944D81B20178C00D86F91 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B52944901B200A3C00D86F91 /* libK3poControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52944841B200A3C00D86F91 /* libK3poControl.a */; };
+		B52944B21B200BBE00D86F91 /* K3poStartCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944A01B200BBE00D86F91 /* K3poStartCommand.m */; };
+		B52944B31B200BBE00D86F91 /* K3poStartedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944A21B200BBE00D86F91 /* K3poStartedEvent.m */; };
+		B52944B41B200BBE00D86F91 /* K3poPrepareCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944A51B200BBE00D86F91 /* K3poPrepareCommand.m */; };
+		B52944B51B200BBE00D86F91 /* K3poPreparedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944A71B200BBE00D86F91 /* K3poPreparedEvent.m */; };
+		B52944B61B200BBE00D86F91 /* K3poFinishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944A91B200BBE00D86F91 /* K3poFinishedEvent.m */; };
+		B52944B71B200BBE00D86F91 /* K3poErrorEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944AB1B200BBE00D86F91 /* K3poErrorEvent.m */; };
+		B52944B81B200BBE00D86F91 /* K3poEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944AD1B200BBE00D86F91 /* K3poEvent.m */; };
+		B52944B91B200BBE00D86F91 /* K3poCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944AF1B200BBE00D86F91 /* K3poCommand.m */; };
+		B52944BA1B200BBE00D86F91 /* K3poAbortCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944B11B200BBE00D86F91 /* K3poAbortCommand.m */; };
+		B52944BF1B200BCE00D86F91 /* K3poEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944BC1B200BCE00D86F91 /* K3poEventManager.m */; };
+		B52944C01B200BCE00D86F91 /* K3poCommandDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944BE1B200BCE00D86F91 /* K3poCommandDispatcher.m */; };
+		B52944C21B200C2800D86F91 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52944C11B200C2800D86F91 /* CFNetwork.framework */; };
+		B52944C41B200C3100D86F91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52944C31B200C3100D86F91 /* Foundation.framework */; };
+		B52944C61B200C9F00D86F91 /* K3poStartCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944A31B200BBE00D86F91 /* K3poStartCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944C71B200CA500D86F91 /* K3poCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944AE1B200BBE00D86F91 /* K3poCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944C81B200CAC00D86F91 /* K3poErrorEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944AA1B200BBE00D86F91 /* K3poErrorEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944C91B200CB600D86F91 /* K3poAbortCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944B01B200BBE00D86F91 /* K3poAbortCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CA1B200CBC00D86F91 /* K3poPrepareCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944A41B200BBE00D86F91 /* K3poPrepareCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CB1B200CC200D86F91 /* K3poEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944AC1B200BBE00D86F91 /* K3poEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CC1B200CC800D86F91 /* K3poFinishedEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944A81B200BBE00D86F91 /* K3poFinishedEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CD1B200CCD00D86F91 /* K3poPreparedEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944A61B200BBE00D86F91 /* K3poPreparedEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CE1B200CD300D86F91 /* K3poStartedEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944A11B200BBE00D86F91 /* K3poStartedEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944CF1B200CD800D86F91 /* K3poCommandDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944BD1B200BCE00D86F91 /* K3poCommandDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944D01B200CDF00D86F91 /* K3poEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944BB1B200BCE00D86F91 /* K3poEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944DB1B20C6CE00D86F91 /* K3poControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944DA1B20C6CE00D86F91 /* K3poControlTest.m */; };
+		B52944E11B20D92200D86F91 /* K3poClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944DF1B20D92200D86F91 /* K3poClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944E21B20D92200D86F91 /* K3poClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944E01B20D92200D86F91 /* K3poClient.m */; };
+		B52944E51B2126A000D86F91 /* K3poController.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944E31B2126A000D86F91 /* K3poController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B52944E61B2126A000D86F91 /* K3poController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52944E41B2126A000D86F91 /* K3poController.m */; };
+		B52944E81B212A0F00D86F91 /* K3poControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B52944E71B2127F300D86F91 /* K3poControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B52944911B200A3C00D86F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B529447C1B200A3C00D86F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B52944831B200A3C00D86F91;
+			remoteInfo = K3poControl;
+		};
+		B52944D71B20178C00D86F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B529447C1B200A3C00D86F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B52944831B200A3C00D86F91;
+			remoteInfo = K3poControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B52944821B200A3C00D86F91 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B52944841B200A3C00D86F91 /* libK3poControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libK3poControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B529448F1B200A3C00D86F91 /* K3poControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = K3poControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52944951B200A3C00D86F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B52944A01B200BBE00D86F91 /* K3poStartCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poStartCommand.m; sourceTree = "<group>"; };
+		B52944A11B200BBE00D86F91 /* K3poStartedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poStartedEvent.h; sourceTree = "<group>"; };
+		B52944A21B200BBE00D86F91 /* K3poStartedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poStartedEvent.m; sourceTree = "<group>"; };
+		B52944A31B200BBE00D86F91 /* K3poStartCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poStartCommand.h; sourceTree = "<group>"; };
+		B52944A41B200BBE00D86F91 /* K3poPrepareCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poPrepareCommand.h; sourceTree = "<group>"; };
+		B52944A51B200BBE00D86F91 /* K3poPrepareCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poPrepareCommand.m; sourceTree = "<group>"; };
+		B52944A61B200BBE00D86F91 /* K3poPreparedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poPreparedEvent.h; sourceTree = "<group>"; };
+		B52944A71B200BBE00D86F91 /* K3poPreparedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poPreparedEvent.m; sourceTree = "<group>"; };
+		B52944A81B200BBE00D86F91 /* K3poFinishedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poFinishedEvent.h; sourceTree = "<group>"; };
+		B52944A91B200BBE00D86F91 /* K3poFinishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poFinishedEvent.m; sourceTree = "<group>"; };
+		B52944AA1B200BBE00D86F91 /* K3poErrorEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poErrorEvent.h; sourceTree = "<group>"; };
+		B52944AB1B200BBE00D86F91 /* K3poErrorEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poErrorEvent.m; sourceTree = "<group>"; };
+		B52944AC1B200BBE00D86F91 /* K3poEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poEvent.h; sourceTree = "<group>"; };
+		B52944AD1B200BBE00D86F91 /* K3poEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poEvent.m; sourceTree = "<group>"; };
+		B52944AE1B200BBE00D86F91 /* K3poCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poCommand.h; sourceTree = "<group>"; };
+		B52944AF1B200BBE00D86F91 /* K3poCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poCommand.m; sourceTree = "<group>"; };
+		B52944B01B200BBE00D86F91 /* K3poAbortCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poAbortCommand.h; sourceTree = "<group>"; };
+		B52944B11B200BBE00D86F91 /* K3poAbortCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poAbortCommand.m; sourceTree = "<group>"; };
+		B52944BB1B200BCE00D86F91 /* K3poEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poEventManager.h; sourceTree = "<group>"; };
+		B52944BC1B200BCE00D86F91 /* K3poEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poEventManager.m; sourceTree = "<group>"; };
+		B52944BD1B200BCE00D86F91 /* K3poCommandDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poCommandDispatcher.h; sourceTree = "<group>"; };
+		B52944BE1B200BCE00D86F91 /* K3poCommandDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poCommandDispatcher.m; sourceTree = "<group>"; };
+		B52944C11B200C2800D86F91 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B52944C31B200C3100D86F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B52944DA1B20C6CE00D86F91 /* K3poControlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poControlTest.m; sourceTree = "<group>"; };
+		B52944DF1B20D92200D86F91 /* K3poClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poClient.h; sourceTree = "<group>"; };
+		B52944E01B20D92200D86F91 /* K3poClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poClient.m; sourceTree = "<group>"; };
+		B52944E31B2126A000D86F91 /* K3poController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3poController.h; sourceTree = "<group>"; };
+		B52944E41B2126A000D86F91 /* K3poController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3poController.m; sourceTree = "<group>"; };
+		B52944E71B2127F300D86F91 /* K3poControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3poControl.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B52944811B200A3C00D86F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52944C41B200C3100D86F91 /* Foundation.framework in Frameworks */,
+				B52944C21B200C2800D86F91 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B529448C1B200A3C00D86F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52944901B200A3C00D86F91 /* libK3poControl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B529447B1B200A3C00D86F91 = {
+			isa = PBXGroup;
+			children = (
+				B52944C31B200C3100D86F91 /* Foundation.framework */,
+				B52944C11B200C2800D86F91 /* CFNetwork.framework */,
+				B52944861B200A3C00D86F91 /* K3poControl */,
+				B52944931B200A3C00D86F91 /* K3poControlTests */,
+				B52944851B200A3C00D86F91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B52944851B200A3C00D86F91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B52944841B200A3C00D86F91 /* libK3poControl.a */,
+				B529448F1B200A3C00D86F91 /* K3poControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B52944861B200A3C00D86F91 /* K3poControl */ = {
+			isa = PBXGroup;
+			children = (
+				B529449E1B200A8800D86F91 /* Command */,
+				B529449F1B200A9100D86F91 /* Event */,
+				B52944DF1B20D92200D86F91 /* K3poClient.h */,
+				B52944E01B20D92200D86F91 /* K3poClient.m */,
+				B52944BD1B200BCE00D86F91 /* K3poCommandDispatcher.h */,
+				B52944BE1B200BCE00D86F91 /* K3poCommandDispatcher.m */,
+				B52944E71B2127F300D86F91 /* K3poControl.h */,
+				B52944E31B2126A000D86F91 /* K3poController.h */,
+				B52944E41B2126A000D86F91 /* K3poController.m */,
+				B52944BB1B200BCE00D86F91 /* K3poEventManager.h */,
+				B52944BC1B200BCE00D86F91 /* K3poEventManager.m */,
+			);
+			path = K3poControl;
+			sourceTree = "<group>";
+		};
+		B52944931B200A3C00D86F91 /* K3poControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				B52944941B200A3C00D86F91 /* Supporting Files */,
+				B52944DA1B20C6CE00D86F91 /* K3poControlTest.m */,
+			);
+			path = K3poControlTests;
+			sourceTree = "<group>";
+		};
+		B52944941B200A3C00D86F91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B52944951B200A3C00D86F91 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B529449E1B200A8800D86F91 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				B52944B01B200BBE00D86F91 /* K3poAbortCommand.h */,
+				B52944B11B200BBE00D86F91 /* K3poAbortCommand.m */,
+				B52944AE1B200BBE00D86F91 /* K3poCommand.h */,
+				B52944AF1B200BBE00D86F91 /* K3poCommand.m */,
+				B52944A41B200BBE00D86F91 /* K3poPrepareCommand.h */,
+				B52944A51B200BBE00D86F91 /* K3poPrepareCommand.m */,
+				B52944A31B200BBE00D86F91 /* K3poStartCommand.h */,
+				B52944A01B200BBE00D86F91 /* K3poStartCommand.m */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
+		B529449F1B200A9100D86F91 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B52944AC1B200BBE00D86F91 /* K3poEvent.h */,
+				B52944AD1B200BBE00D86F91 /* K3poEvent.m */,
+				B52944AA1B200BBE00D86F91 /* K3poErrorEvent.h */,
+				B52944AB1B200BBE00D86F91 /* K3poErrorEvent.m */,
+				B52944A81B200BBE00D86F91 /* K3poFinishedEvent.h */,
+				B52944A91B200BBE00D86F91 /* K3poFinishedEvent.m */,
+				B52944A61B200BBE00D86F91 /* K3poPreparedEvent.h */,
+				B52944A71B200BBE00D86F91 /* K3poPreparedEvent.m */,
+				B52944A11B200BBE00D86F91 /* K3poStartedEvent.h */,
+				B52944A21B200BBE00D86F91 /* K3poStartedEvent.m */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B52944C51B200C5A00D86F91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52944E81B212A0F00D86F91 /* K3poControl.h in Headers */,
+				B52944E51B2126A000D86F91 /* K3poController.h in Headers */,
+				B52944E11B20D92200D86F91 /* K3poClient.h in Headers */,
+				B52944D01B200CDF00D86F91 /* K3poEventManager.h in Headers */,
+				B52944CF1B200CD800D86F91 /* K3poCommandDispatcher.h in Headers */,
+				B52944CE1B200CD300D86F91 /* K3poStartedEvent.h in Headers */,
+				B52944CD1B200CCD00D86F91 /* K3poPreparedEvent.h in Headers */,
+				B52944CC1B200CC800D86F91 /* K3poFinishedEvent.h in Headers */,
+				B52944CB1B200CC200D86F91 /* K3poEvent.h in Headers */,
+				B52944CA1B200CBC00D86F91 /* K3poPrepareCommand.h in Headers */,
+				B52944C91B200CB600D86F91 /* K3poAbortCommand.h in Headers */,
+				B52944C81B200CAC00D86F91 /* K3poErrorEvent.h in Headers */,
+				B52944C71B200CA500D86F91 /* K3poCommand.h in Headers */,
+				B52944C61B200C9F00D86F91 /* K3poStartCommand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B52944831B200A3C00D86F91 /* K3poControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52944981B200A3C00D86F91 /* Build configuration list for PBXNativeTarget "K3poControl" */;
+			buildPhases = (
+				B52944801B200A3C00D86F91 /* Sources */,
+				B52944811B200A3C00D86F91 /* Frameworks */,
+				B52944821B200A3C00D86F91 /* CopyFiles */,
+				B52944C51B200C5A00D86F91 /* Headers */,
+				B52944D21B2016D600D86F91 /* Build Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = K3poControl;
+			productName = K3poControl;
+			productReference = B52944841B200A3C00D86F91 /* libK3poControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B529448E1B200A3C00D86F91 /* K3poControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B529449B1B200A3C00D86F91 /* Build configuration list for PBXNativeTarget "K3poControlTests" */;
+			buildPhases = (
+				B529448B1B200A3C00D86F91 /* Sources */,
+				B529448C1B200A3C00D86F91 /* Frameworks */,
+				B529448D1B200A3C00D86F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B52944921B200A3C00D86F91 /* PBXTargetDependency */,
+			);
+			name = K3poControlTests;
+			productName = K3poControlTests;
+			productReference = B529448F1B200A3C00D86F91 /* K3poControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B529447C1B200A3C00D86F91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Sanjay Saxena";
+				TargetAttributes = {
+					B52944831B200A3C00D86F91 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B529448E1B200A3C00D86F91 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B52944D31B20177800D86F91 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = B529447F1B200A3C00D86F91 /* Build configuration list for PBXProject "K3poControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B529447B1B200A3C00D86F91;
+			productRefGroup = B52944851B200A3C00D86F91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B52944831B200A3C00D86F91 /* K3poControl */,
+				B529448E1B200A3C00D86F91 /* K3poControlTests */,
+				B52944D31B20177800D86F91 /* Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B529448D1B200A3C00D86F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B52944D21B2016D600D86F91 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+		};
+		B52944D91B20181D00D86F91 /* Multiplatform Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Multiplatform Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\n# ditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\nrm -rf \"${SRCROOT}/build\"\nmkdir -p \"${SRCROOT}/build\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${PROJECT_NAME}.framework\" \"${SRCROOT}/build\"\n\nmkdir -p \"${SRCROOT}/build/framework\"\ncp -R \"${SRCROOT}/build/${PROJECT_NAME}\".framework \"${SRCROOT}/build/framework\"\nhdiutil create -ov -srcfolder \"${SRCROOT}/build/framework\" -fs HFS+ -volname \"Kaazing ${PROJECT_NAME}\" \"${SRCROOT}/build/framework/${PROJECT_NAME}.dmg\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B52944801B200A3C00D86F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52944B21B200BBE00D86F91 /* K3poStartCommand.m in Sources */,
+				B52944C01B200BCE00D86F91 /* K3poCommandDispatcher.m in Sources */,
+				B52944B41B200BBE00D86F91 /* K3poPrepareCommand.m in Sources */,
+				B52944B61B200BBE00D86F91 /* K3poFinishedEvent.m in Sources */,
+				B52944B71B200BBE00D86F91 /* K3poErrorEvent.m in Sources */,
+				B52944B81B200BBE00D86F91 /* K3poEvent.m in Sources */,
+				B52944E21B20D92200D86F91 /* K3poClient.m in Sources */,
+				B52944B31B200BBE00D86F91 /* K3poStartedEvent.m in Sources */,
+				B52944BF1B200BCE00D86F91 /* K3poEventManager.m in Sources */,
+				B52944E61B2126A000D86F91 /* K3poController.m in Sources */,
+				B52944B91B200BBE00D86F91 /* K3poCommand.m in Sources */,
+				B52944BA1B200BBE00D86F91 /* K3poAbortCommand.m in Sources */,
+				B52944B51B200BBE00D86F91 /* K3poPreparedEvent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B529448B1B200A3C00D86F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52944DB1B20C6CE00D86F91 /* K3poControlTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B52944921B200A3C00D86F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B52944831B200A3C00D86F91 /* K3poControl */;
+			targetProxy = B52944911B200A3C00D86F91 /* PBXContainerItemProxy */;
+		};
+		B52944D81B20178C00D86F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B52944831B200A3C00D86F91 /* K3poControl */;
+			targetProxy = B52944D71B20178C00D86F91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B52944961B200A3C00D86F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B52944971B200A3C00D86F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B52944991B200A3C00D86F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		B529449A1B200A3C00D86F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		B529449C1B200A3C00D86F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = K3poControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B529449D1B200A3C00D86F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = K3poControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B52944D51B20177800D86F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B52944D61B20177800D86F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B529447F1B200A3C00D86F91 /* Build configuration list for PBXProject "K3poControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52944961B200A3C00D86F91 /* Debug */,
+				B52944971B200A3C00D86F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B52944981B200A3C00D86F91 /* Build configuration list for PBXNativeTarget "K3poControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52944991B200A3C00D86F91 /* Debug */,
+				B529449A1B200A3C00D86F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B529449B1B200A3C00D86F91 /* Build configuration list for PBXNativeTarget "K3poControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B529449C1B200A3C00D86F91 /* Debug */,
+				B529449D1B200A3C00D86F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B52944D41B20177800D86F91 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52944D51B20177800D86F91 /* Debug */,
+				B52944D61B20177800D86F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B529447C1B200A3C00D86F91 /* Project object */;
+}

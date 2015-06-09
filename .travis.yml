@@ -1,4 +1,4 @@
 language: objective-c
-xcode_project: KZRobot.xcodeproj
-xcode_scheme: KZRobotTests
+xcode_project: K3poControl.xcodeproj
+xcode_scheme: Framework
 xcode_sdk: iphonesimulator
